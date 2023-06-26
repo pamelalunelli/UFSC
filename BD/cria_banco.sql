@@ -68,17 +68,21 @@ CREATE TABLE rodoviario.LINHA_PARADA (
 );
 
 CREATE TABLE rodoviario.MEIO_PAGAMENTO_TERMINAL (
-    FK_MEIO_PAGAMENTO_id_meio_pagamento int,
+    id_meio_pagamento_terminal int PRIMARY KEY,
+	FK_MEIO_PAGAMENTO_id_meio_pagamento int,
     FK_TERMINAL_id_terminal int
 );
 
 
 CREATE TABLE rodoviario.CONEXAO (
-    FK_LINHA_id_linha int,
+    id_conexao int PRIMARY KEY,
+	FK_LINHA_id_linha int,
     FK_TERMINAL_id_terminal int
+	
 );
 
 CREATE TABLE rodoviario.LINHA_PARADA_ITINERARIO (
+	id_linha_parada_itinerario int PRIMARY KEY,
     FK_LINHA_PARADA_LINHA_PARADA_id_linha_parada int,
     FK_ITINERARIO_id_itinerario int
 );
